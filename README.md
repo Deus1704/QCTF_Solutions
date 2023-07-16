@@ -9,6 +9,13 @@ This Contains the solutions to the CTF problems solved during the QCTF challenge
 | Spectral_Secret  | 50  | CTF{m3_1z_pr0}    |
 | Really Simple Algorithm  | 50  | CTF{d3cipher_m3_if_y0u_can}    |
 
-1. **Flag Finder**
+<br>
+<br>
+
+1. ### **Flag Finder (10 Points):**<br>
+   Firstly from observation the given cipher appears to be encoded in Hexadecimal format. Using the ```echo``` and ```xxd``` command on Bash, I decrypted the given cipher. This
+   gave out another cipher that was encrytped in Base64 format. Using the ```Base64 -d``` decoding syntax in the bash I was able to decode the cipher and finally found the flag.
    ![image](https://github.com/Deus1704/QCTF_Solutions/assets/117574289/49763edc-62ab-4861-9d24-3b0256d906b6)
+
+   **Flag: &nbsp;&nbsp;CTF{6006l35_f0r_fl46_n4m35}**
 

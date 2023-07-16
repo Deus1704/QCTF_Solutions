@@ -8,3 +8,5 @@ This Contains the solutions to the CTF problems solved during the QCTF challenge
 | Binary Bounty  | 30  | CTF{1mm4_h4ck3rm4nn_n0w}    |
 | Spectral_Secret  | 50  | CTF{m3_1z_pr0}    |
 | Really Simple Algorithm  | 50  | CTF{d3cipher_m3_if_y0u_can}    |
+
+![image](https://github.com/Deus1704/QCTF_Solutions/assets/117574289/387d3742-8fef-4e9f-8573-aba1c889d46b)

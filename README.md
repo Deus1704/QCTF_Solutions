@@ -101,7 +101,7 @@ plt.show()
 
 
 8. ### **Really Simple Algorithm (50 Points):**<br>
-   This challenge was mathematically heavy. I studied the RSA from https://en.wikipedia.org/wiki/RSA_(cryptosystem) and figured out that I needed `N` or `p` and `q` (together),`m`,`e` and `d`. Since we weren't directly provided with any of these working parameters of an RSA algorithm, we had to try all possible ways. The very end of the question statement contained two numbers, without any identification, I began trying all possible ways by assigning them to different parameters. After many trials, I finally found the pair of parameters that would give sensible output. These were the values of `e` and `N`(modulus)
+   This challenge was mathematically heavy. I studied the RSA from https://en.wikipedia.org/wiki/RSA_(cryptosystem) and figured out that I needed `N` or `p` and `q` (together),`m`,`e` and `d`. Since we weren't directly provided with any of these working parameters of an RSA algorithm, we had to try all possible ways. The very end of the question statement contained two numbers, without any identification, I began trying all possible ways by assigning them to different parameters. After many trials, I finally found the pair of parameters that would give sensible output. These were the values of `e` and `N`(modulus). Using them, I found the hex value of each charachter and then converted it into the corresponding charachter and found the flag.
 
 
 ```

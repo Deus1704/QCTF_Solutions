@@ -5,7 +5,10 @@ This Contains the solutions to the CTF problems solved during the QCTF challenge
 | -------- | --- | ------------ |
 | Flag Finder    | 10  | CTF{6006l35_f0r_fl46_n4m35}     |
 | Video      | 20  | CTF{r1ck_r0ll1n6_h45_607_0ld}     |
+| What does the server say?  | 25  | CTF{m0r3_7r0ubl3_7h4n_175_w0r7h}    |
 | Binary Bounty  | 30  | CTF{1mm4_h4ck3rm4nn_n0w}    |
+| Hide Your Secrets  | 30  | CTF{w31rd_flag}    |
+| Conversion  | 35  | CTF{dumb_audio_flag}    |
 | Spectral_Secret  | 50  | CTF{m3_1z_pr0}    |
 | Really Simple Algorithm  | 50  | CTF{d3cipher_m3_if_y0u_can}    |
 

@@ -18,7 +18,49 @@ This Contains the solutions to the CTF problems solved during the QCTF challenge
 1. ### **Flag Finder (10 Points):**<br>
    Firstly from observation the given cipher appears to be encoded in Hexadecimal format. Using the ```echo``` and ```xxd``` command on Bash, I decrypted the given cipher. This
    gave out another cipher that was encrytped in Base64 format. Using the ```Base64 -d``` decoding syntax in the bash I was able to decode the cipher and finally found the flag.
-   ![image](https://github.com/Deus1704/QCTF_Solutions/assets/117574289/49763edc-62ab-4861-9d24-3b0256d906b6)
+   ![image](https://raw.githubusercontent.com/Deus1704/QCTF_Solutions/main/Images/CTF1sol.png?token=GHSAT0AAAAAACA34FX3U3BYIZLXQDWTBJSMZFWUESA)
 
    **Flag: &nbsp;&nbsp;CTF{6006l35_f0r_fl46_n4m35}**
 
+<br>
+
+2. ### **Video (20 Points):**<br>
+   For this challenge, I studied the methods of Steganography from the following blog https://0xrick.github.io/lists/stego/. Using the `exiftool` command in Bash, while analysing
+   the output from the exiftool, I noticied the flag inside comments. 
+   ![image2](https://raw.githubusercontent.com/Deus1704/QCTF_Solutions/main/Images/CTF2sol.png?token=GHSAT0AAAAAACA34FX3VRXAV6WJ6JKBSFX6ZFWUNHA)
+
+
+
+4. ### **Flag Finder (10 Points):**<br>
+
+
+
+
+
+
+
+5. ### **Flag Finder (10 Points):**<br>
+
+
+
+
+
+
+
+6. ### **Flag Finder (10 Points):**<br>
+
+
+
+
+
+7. ### **Flag Finder (10 Points):**<br>
+
+
+
+
+8. ### **Flag Finder (10 Points):**<br>
+
+
+
+
+9. ### **Flag Finder (10 Points):**<br>

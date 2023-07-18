@@ -100,4 +100,27 @@ plt.show()
 
 
 
-8. ### **Flag Finder (10 Points):**<br>
+8. ### **Really Simple Algorithm (50 Points):**<br>
+   This challenge was mathematically heavy. I studied the RSA from https://en.wikipedia.org/wiki/RSA_(cryptosystem) and figured out that I needed `N` or `p` and `q` (together),`m`,`e` and `d`. Since we weren't directly provided with any of these working parameters of an RSA algorithm, we had to try all possible ways. The very end of the question statement contained two numbers, without any identification, I began trying all possible ways by assigning them to different parameters. After many trials, I finally found the pair of parameters that would give sensible output. These were the values of `e` and `N`(modulus)
+
+
+```
+e=129834683
+N=10529980290229
+p=1775867
+q=5929487
+Ciphers=[6448485280296 , 4683776938738 , 9577089513307 , 6888093682969 , 9019339071410 , 246189401736 , 5139025648676 , 9409769051528 , 780685933709, 1471462085731, 4683776938738, 780685933709 , 6888093682969, 6478775835003, 780685933709, 6062412063462, 6243860990272, 353906583386, 780685933709, 9577089513307, 688247530411, 2362286149030]
+
+# print(N)
+lamb= (p-1)*(q-1)
+print(lamb)
+# d= (e**(-1%(lamb)))
+d=pow(e,-1,lamb)
+print(d)
+
+for c in Ciphers:
+  m=pow(c,d,N)
+  print(hex(m))
+```
+   **Flag: &nbsp;&nbsp;CTF{d3cipher_m3_if_y0u_can}**
+<br>

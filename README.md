@@ -66,10 +66,30 @@ This sounded weird. Then I realised it was in reverse. Then using the reverse co
 <br>
 
 8. ### **Spectral_Secret (50 Points):**<br>
-   Firstly analysed the
+   Firstly, I analyzed the file that contained the arrays of values, and I noticed that these values were represented as complex numbers. The shape of the array was (574, 1366), indicating that it was a 2D array with 574 rows and 1366 columns. My goal was to find a way to extract meaningful information from these complex values and uncover the hidden flag. To start, I attempted an Inverse Fourier Transform (IFT) of order 1 on the complex number arrays, hoping it would reveal something useful. Unfortunately, this initial attempt didn't provide any relevant results, and I couldn't find the flag I was looking for. However, I wasn't ready to give up just yet. I decided to take a more sophisticated approach and applied the Inverse Fourier Transform of order 2 to the complex number arrays. To my delight, this time it worked like magic! "Voila!" I found the elusive flag hidden within the arrays.
 
+```
+import numpy as np
+import matplotlib.pyplot as plt
 
+# Load the .npy file
+data = np.load('spectral_secret.npy')
 
+print(data.shape)
+# Apply the inverse Fourier transform
+inverse_data = np.fft.ifft(data)
+
+# Plot the real part
+plt.figure()
+plt.imshow(np.real(inverse_data), cmap='gray')
+plt.colorbar()
+plt.title('Real Part')
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+
+plt.show()
+```
+<br>
 
    ![image](/Images/CTF7sol.png)
 

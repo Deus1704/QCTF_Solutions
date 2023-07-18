@@ -18,49 +18,62 @@ This Contains the solutions to the CTF problems solved during the QCTF challenge
 1. ### **Flag Finder (10 Points):**<br>
    Firstly from observation the given cipher appears to be encoded in Hexadecimal format. Using the ```echo``` and ```xxd``` command on Bash, I decrypted the given cipher. This
    gave out another cipher that was encrytped in Base64 format. Using the ```Base64 -d``` decoding syntax in the bash I was able to decode the cipher and finally found the flag.
-   ![image](https://raw.githubusercontent.com/Deus1704/QCTF_Solutions/main/Images/CTF1sol.png?token=GHSAT0AAAAAACA34FX3U3BYIZLXQDWTBJSMZFWUESA)
-
+   ![image](/Images/CTF1sol.png)
+   
    **Flag: &nbsp;&nbsp;CTF{6006l35_f0r_fl46_n4m35}**
 
 <br>
 
 2. ### **Video (20 Points):**<br>
    For this challenge, I studied the methods of Steganography from the following blog https://0xrick.github.io/lists/stego/. Using the `exiftool` command in Bash, while analysing
-   the output from the exiftool, I noticied the flag inside comments. 
-   ![image2](https://raw.githubusercontent.com/Deus1704/QCTF_Solutions/main/Images/CTF2sol.png?token=GHSAT0AAAAAACA34FX3VRXAV6WJ6JKBSFX6ZFWUNHA)
+   the output from the exiftool, I noticied the flag inside comments.<br>
+   <br>
+   ![image2](/Images/CTF2sol.png)
+
+   **Flag: &nbsp;&nbsp;CTF{r1ck_r0ll1n6_h45_607_0ld}**
+<br>
+
+3. ### **What does the server say? (25 Points):**<br>
+   This was one of the most problematic yet simplest challenge of the all. From the looks of it and through the general methods to solve web based CTFs, I tried to access the
+   http://139.59.26.242:20632 multiple times but it refused to connect nearly everytime. Hence to dig deeper in the given port, I tried port knocking using the open ports 21, 80 and 2000. This was tracked using Wireshark on Linux VM but no response was recieved. Then I tried SSH Tunneling by setting up a localhost at port 8000 and tried to connect to port 20632, yet again refused to connect. Atlast when all hope was gone, I kept opening the site with given port and to my surprise it opened up and was able to get the flag. The end message does make sense since I had to keep looking at it but harder.
+   <br>
+   ![image](/Images/CTF3sol.png)
+
+   **Flag: &nbsp;&nbsp;CTF{m0r3_7r0ubl3_7h4n_175_w0r7h}**
+<br>
+
+4. ### **Binary Bounty (30 Points):**<br>
+   The given file on basic analysis usign the `file` command in Bash. This analysis cleared that the elf file was a mix of ASCII and binary values. To quickly find the flag that might be hidden, I tried the `strings` command and found out something catchy saying, "flag doesn't seem so easily obtainable". This had some repetetions like the word `easily` and `sily`. Apart from the obvious extra `H`s in the flag, the repetetions gave me a hint that some word might be repeated in the flag. Hence tried all the possible flags.
+   <br>
+   ![image](/Images/CTF4sol.png)
+
+   **Flag: &nbsp;&nbsp;CTF{1mm4_h4ck3rm4nn_n0w}**
+<br>
+
+5. ### **Hide Your Secrets (30 Points):**<br>
+   Analysing the file provided, I found that it contained ASCII charachters. Now using the `cat` command, I analysed the file contents and found them to be simple key logs. I read bout keylogging and the scan codes for different keyboards from https://en.wikipedia.org/wiki/Keystroke_logging .Now using these key logs to be the decimal scan codes of the keyboard used while it was being keylogged, I deciphered the keys and found the flag as VTF{w31rd_flag} but since the format was CTF{}, it had to be corrected.
+
+   **Flag: &nbsp;&nbsp;CTF{w31rd_flag}**
+<br>
+
+6. ### **Conversion (35 Points):**<br>
+   After analysing the file, I found that it was containing only ASCII values which were not comprehendable. Since it was mentioning about the file being froma audio company, I figured out that it must be converted to some audio format. While analysing its file headers, I found it to be containing ID3 tags, which showed me that the file was an mp3 earlier. In order to conver it back to mp3, I first had to convert the file into binary file. Using the `ffmpeg` tool I converted the binary file into mp3 file and then played it. <br>
+   ![image](/Images/convfirststep.png)
+This sounded weird. Then I realised it was in reverse. Then using the reverse command of the ffmpeg, I finally converted it and found the flag.<br>
+   ![image](/Images/confrombintomp4.png)
+   <br>
+   **Flag: &nbsp;&nbsp;CTF{dumb_audio_flag}**
+<br>
+
+8. ### **Spectral_Secret (50 Points):**<br>
+   Firstly analysed the
 
 
 
-4. ### **Flag Finder (10 Points):**<br>
+
+   ![image](/Images/CTF7sol.png)
 
 
 
 
-
-
-
-5. ### **Flag Finder (10 Points):**<br>
-
-
-
-
-
-
-
-6. ### **Flag Finder (10 Points):**<br>
-
-
-
-
-
-7. ### **Flag Finder (10 Points):**<br>
-
-
-
-
-8. ### **Flag Finder (10 Points):**<br>
-
-
-
-
-9. ### **Flag Finder (10 Points):**<br>
+10. ### **Flag Finder (10 Points):**<br>
